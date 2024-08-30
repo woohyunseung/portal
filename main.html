@@ -5,25 +5,31 @@ body::-webkit-scrollbar {
   scrollbar-width: none; /* 파이어폭스 */
 }
 @keyframes enter{
-	from {
-		opacity: 0;
+	0% {
         top: 50px;
+        opacity: 0;
 	}
-	to {
-		opacity: 1;
+    50% {
+        top: 50px;
+        opacity: 0;
+    }
+	100% {
         top: 0px;
+        opacity: 1;
 	}
 }
 body{
-    position: relative;
     background-color: #222;
-    animation: enter 1s;
+    animation: enter 1.25s;
 }
 @keyframes fadein{
-	from {
+	0% {
 		opacity: 0;
 	}
-	to {
+    50%{
+        opacity: 0;
+    }
+	100% {
 		opacity: 1;
 	}
 }
@@ -33,7 +39,6 @@ body{
     height: 189px;
     background-image: url('./dngustmd.png');
     background-size: 100%;
-    animation: enter 4s;
 }
 #search-box{
     width: 300px;
@@ -89,14 +94,6 @@ body{
         #pubg{
             background-image: url('./pubg.png');
         }
-@keyframes space1{
-	from {
-		letter-spacing: -8px;
-	}
-	to {
-		letter-spacing: -.5px;
-	}
-}
 #hyperlinks{
     float: left;
     width: 100%;
@@ -108,10 +105,9 @@ body{
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        animation: space1 1s;
         letter-spacing: -.5px;
     }
-@keyframes space2{
+@keyframes space{
 	from {
 		letter-spacing: -4px;
 	}
@@ -125,14 +121,30 @@ body{
     margin-top: 20px;
     text-align: center;
     color: #ccc;
-    animation: space2 1s;
+    animation: space 1s 0.65s;
     letter-spacing: 4px;
     font-size: 14px;
 }
 
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    color: #ddd;
+    letter-spacing: -.5px;
+    font-size: 14px;
+}
+    footer div{
+        float: right;
+        margin-right: 10px;
+    }
 </style>
 
 <body>
+    <div id="loading"></div>
     <div id="dngustmd"></div>
     <form id="search-box" action="https://www.google.com/search" method="GET">
         <input id="search" name="q" type="text" placeholder="검색어 입력 후 Enter">
@@ -153,3 +165,8 @@ body{
     </div>
     <div id="description">우현승을 위한, 우현승에 의한, 우현승의 간편 포탈 페이지</div>
 </body>
+<footer>
+    <div id="last-update">최종 업데이트일 2024-08-30</div>
+    <br>
+    <div id="maker">페이지 디자인: 우현승</div>
+</footer>
