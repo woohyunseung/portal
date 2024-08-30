@@ -1,0 +1,146 @@
+<style>
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+@keyframes enter{
+	from {
+		opacity: 0;
+        top: 50px;
+	}
+	to {
+		opacity: 1;
+        top: 0px;
+	}
+}
+body{
+    position: relative;
+    background-color: #222;
+    animation: enter 1s;
+}
+#dngustmd{
+    margin: 150px auto 0 auto;
+    width: 215px;
+    height: 189px;
+    background-image: url('./dngustmd.png');
+    background-size: 100%;
+}
+#search-box{
+    width: 300px;
+    height: 40px;
+    margin: 0px auto;
+}
+    #search{
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        border: none;
+        box-shadow: 0px 5px 20px 0px #11111133;
+        text-align: center;
+        transition-duration: 0.2s;
+    }
+        #search:hover{
+            transform: scale(1.1);
+        }
+        input::placeholder{
+            text-align: center;
+        }
+        input:focus{
+            outline: none;
+            transition-duration: 0.2s;
+            transform: scale(1.1);
+        }
+#buttons{
+    width: 340px;
+    margin: 20px auto 0 auto;
+}
+    .button{
+        float: left;
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        background-color: #000;
+        background-size: 100%;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+        .button:hover{
+            background-size: 120%;
+            filter: brightness(1.2);
+        }
+        #youtube{
+            background-image: url('./youtube.png');
+            margin-right: 20px;
+        }
+        #chzzk{
+            background-image: url('./chzzk.png');
+            margin-right: 20px;
+        }
+        #pubg{
+            background-image: url('./pubg.png');
+        }
+@keyframes space1{
+	from {
+		letter-spacing: -8px;
+	}
+	to {
+		letter-spacing: -.5px;
+	}
+}
+#hyperlinks{
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+    #hyperlinks a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        animation: space1 1s;
+        letter-spacing: -.5px;
+    }
+@keyframes space2{
+	from {
+		letter-spacing: -4px;
+	}
+	to {
+		letter-spacing: 4px;
+	}
+}
+#description{
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    color: #ccc;
+    animation: space2 1s;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+</style>
+
+<body>
+    <div id="dngustmd"></div>
+    <form id="search-box" action="https://www.google.com/search" method="GET">
+        <input id="search" name="q" type="text" placeholder="검색어 입력 후 Enter">
+    </form>
+    <div id="buttons">
+        <a href="https://www.youtube.com/@우현승/videos"><div id="youtube" class="button"></div></a>
+        <a href="https://chzzk.naver.com/370d377a69f0d56ecbc7d0c8a5c07883"><div id="chzzk" class="button"></div></a>
+        <a href="https://pubg.game.daum.net"><div id="pubg" class="button"></div></a>
+    </div>
+    <div id="hyperlinks">
+        <a href="https://search.naver.com/search.naver?query=네이버+맞춤법+검사기">맞춤법 검사</a>
+        ㆍ
+        <a href="https://hanja.dict.naver.com">한자 사전</a>
+        ㆍ
+        <a href="https://papago.naver.com">파파고</a>
+        ㆍ
+        <a href="https://www.sandollcloud.com">산돌 구름</a>
+    </div>
+    <div id="description">우현승을 위한, 우현승에 의한, 우현승의 간편 포탈 페이지</div>
+</body>
