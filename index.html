@@ -1,199 +1,9 @@
 <style>
-body::-webkit-scrollbar {
-  display: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-@keyframes enter{
-	0% {
-        opacity: 0;
-	}
-    50% {
-        opacity: 0;
-    }
-	100% {
-        opacity: 1;
-	}
-}
-body{
-    background-color: #222;
-    animation: enter 1.25s;
-}
-@keyframes fadein{
-	0% {
-		opacity: 0;
-	}
-    50%{
-        opacity: 0;
-    }
-	100% {
-		opacity: 1;
-	}
-}
-#dngustmd{
-    margin: 150px auto 0 auto;
-    width: 215px;
-    height: 189px;
-    background-image: url('./media/dngustmd.png');
-    background-size: 100%;
-}
-#search-box{
-    width: 300px;
-    height: 40px;
-    margin: 0px auto;
-}
-    #search{
-        width: 100%;
-        height: 100%;
-        border-radius: 100px;
-        border: none;
-        box-shadow: 0px 5px 20px 0px #11111133;
-        text-align: center;
-        transition-duration: 0.2s;
-    }
-        #search:hover{
-            transform: scale(1.1);
-        }
-        input::placeholder{
-            text-align: center;
-        }
-        input:focus{
-            outline: none;
-            transition-duration: 0.2s;
-            transform: scale(1.1);
-        }
-.main-links{
-    margin: 20px auto 0 auto;
-    width: 450px;
-}
-    .main-links .button{
-        float: left;
-        width: 80px;
-        height: 80px;
-        border-radius: 20px;
-        background-color: #000;
-        background-size: 100%;
-        background-position: center;
-        transition-duration: 0.2s;
-        margin-right: 15px;
-    }
-        .main-links .button:hover{
-            background-size: 120%;
-        }
-        #youtube{ background-image: url('./media/youtube.png'); }
-        #chzzk{ background-image: url('./media/chzzk.png'); margin-right: 0px !important; }
-#subs{
-    width: 450px;
-    margin: 20px auto 0 auto;
-}
-    #subs #work{
-        margin-right: 10px;
-        width: 250px;
-    }
-    #subs #games{
-        width: 190px;
-    }
-.sub-links{
-    float: left;
-}
-    .sub-links .button{
-        float: left;
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        background-color: #000;
-        background-size: 100%;
-        background-position: center;
-        transition-duration: 0.2s;
-        margin-right: 10px;
-    }
-        .sub-links .button:hover{
-            background-size: 120%;
-        }
-        #sandoll{ background-image: url('./media/sandoll.png'); }
-        #papago{ background-image: url('./media/papago.png'); }
-        #spellcheck{ background-image: url('./media/spellcheck.png'); }
-            #spellcheck:hover{ background-image: url('./media/spellcheck2.png'); }
-        #hanja{ background-image: url('./media/hanja.png'); margin-right: 0px !important; }
-
-        #pubg{ background-image: url('./media/pubg.png'); }
-        #lolchess{ background-image: url('./media/lolchess.png'); }
-        #opgg{ background-image: url('./media/opgg.png'); margin-right: 0px !important; }
-.title{
-    text-align: center;
-    color: #fff;
-    font-size: 15px;
-    background-color: #444;
-    margin: 0px auto;
-    border-radius: 10px 10px 0px 0px;
-}
-#main .title{
-    width: 160px;
-}
-#work .title{
-    width: 80px;
-}
-#games .title{
-    width: 100px;
-}
-.tab{
-    border-radius: 10px;
-    border: 1px solid #444;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-#hyperlinks{
-    float: left;
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-    color: #fff;
-}
-    #hyperlinks a{
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        letter-spacing: -.5px;
-    }
-@keyframes space{
-	from {
-		letter-spacing: -4px;
-	}
-	to {
-		letter-spacing: 4px;
-	}
-}
-#description{
-    float: left;
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-    color: #ccc;
-    animation: space 1s 0.65s;
-    letter-spacing: 4px;
-    font-size: 14px;
-}
-
-footer{
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    color: #ddd;
-    letter-spacing: -.5px;
-    font-size: 14px;
-}
-    footer div{
-        float: right;
-        margin-right: 10px;
-    }
 </style>
 
 <head>
 	<title>우현승 포탈</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="loading"></div>
@@ -206,6 +16,8 @@ footer{
         <div class="tab">
             <a href="https://www.youtube.com/@우현승/videos"><div id="youtube" class="button"></div></a>
             <a href="https://chzzk.naver.com/370d377a69f0d56ecbc7d0c8a5c07883"><div id="chzzk" class="button"></div></a>
+            <a href="https://gmail.com"><div id="gmail" class="button"></div></a>
+            <a href="https://viewership.softc.one"><div id="viewership" class="button"></div></a>
         </div>
     </div>
     <div id="subs">
@@ -239,7 +51,7 @@ footer{
     <div id="description">우현승을 위한, 우현승에 의한, 우현승의 간편 포탈 페이지</div>
 </body>
 <footer>
-    <div id="last-update">최종 업데이트일 2024-09-02</div>
+    <div id="last-update">최종 업데이트일 2024-09-04</div>
     <br>
     <div id="maker">페이지 디자인 by 우현승</div>
 </footer>
