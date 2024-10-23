@@ -81,8 +81,8 @@ body::-webkit-scrollbar {
           }
           #youtube{ background-image: url('./media/youtube.png'); }
           #chzzk{ background-image: url('./media/chzzk.png'); }
-          #gmail{ background-image: url('./media/gmail.png'); }
-          #viewership{ background-image: url('./media/viewership.png'); margin-right: 0px !important; }
+          #soop{ background-image: url('./media/soop.png'); }
+          #gmail{ background-image: url('./media/gmail.png'); margin-right: 0px !important; }
   #subs{
       width: 450px;
       margin: 20px auto 0 auto;
